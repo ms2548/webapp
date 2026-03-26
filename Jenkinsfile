@@ -28,7 +28,7 @@ pipeline {
     stage('Deploy') {
       steps {
         deploy adapters: [tomcat9(
-          credentialsId: 'admin',
+          credentialsId: 'tomcat-admin',
           url: 'http://192.168.56.102:8080'
         )],
         contextPath: null,
